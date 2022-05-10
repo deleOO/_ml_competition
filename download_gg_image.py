@@ -5,8 +5,9 @@ import time
 
 def download_gg_image(driver, query, quantity, path_image):
     #get html pagess
-    box = driver.find_element_by_xpath('//*[@id="sbtc"]/div/div[2]/input')
-    box.send_keys(query)
+    box = driver.find_element_by_xpath('//*[@id="REsRA"]')
+    box.clear()
+    box.send_keys(str(query) + ' animal')
     box.send_keys(Keys.ENTER)
 
     #Will keep scrolling down the webpage until it cannot scroll no more
